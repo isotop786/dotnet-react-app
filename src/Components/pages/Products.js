@@ -11,6 +11,8 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
 import AddIcon from '@mui/icons-material/Add';
+import Link from '@mui/material/Link';
+
 
 import axios from 'axios'
 
@@ -86,11 +88,13 @@ const Products = () => {
     return (
       <>
        <Grid sx={{display:'flex', justifyContent:"flex-end", marginBottom:"1rem"}}>
-              <Grid item>
-                    <Button variant="contained" color='secondary'>
+                <Grid item>
+                    <Link href="/products/create">
+                    <Button variant="contained" color='success'>
                         <AddIcon />
                         <span>Add New Product</span>
-                   </Button>
+                    </Button>
+                    </Link>
               </Grid>
           </Grid>
       
@@ -138,7 +142,7 @@ const Products = () => {
                 <Button variant="contained" color="primary" >
                   Edit
                 </Button>
-                      <Button variant="contained" color="secondary">
+                      <Button variant="contained" color="error">
                   Delete
                 </Button>
               </TableCell>

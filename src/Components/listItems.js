@@ -11,6 +11,7 @@ import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import ProductionQuantityLimitsSharpIcon from '@mui/icons-material/ProductionQuantityLimitsSharp';
 import Link from '@mui/material/Link';
+import MessageIcon from '@mui/icons-material/Message';
 import SideNavLink from './SideNavLink';
 
 export const mainListItems = (
@@ -23,12 +24,20 @@ export const mainListItems = (
       <ListItemText primary="Dashboard" />
             </ListItemButton>
     </Link>
-    <Link href={"products"} underline="none">
+    <Link href={"/products"} underline="none">
     <ListItemButton>        
       <ListItemIcon>
         <ProductionQuantityLimitsSharpIcon />
       </ListItemIcon>
       <ListItemText primary="Products" />
+     </ListItemButton>
+    </Link>
+    <Link href={"/messages"} underline="none">
+    <ListItemButton>        
+      <ListItemIcon>
+        <MessageIcon />
+      </ListItemIcon>
+      <ListItemText primary="Messages" />
      </ListItemButton>
     </Link>
     <ListItemButton>

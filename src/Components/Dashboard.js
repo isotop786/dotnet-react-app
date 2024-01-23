@@ -22,11 +22,14 @@ import { mainListItems, secondaryListItems } from './listItems';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
 import { Routes, Route } from "react-router-dom"
+import MessagesDetail from './pages/MessagesDetail';
 
 import Home from './Home'
 import About from './About'
 import Contact from './Contact'
 import Products from './pages/Products';
+import Messages from './pages/Messages';
+import CreateProduct from './pages/CreateProduct';
 
 function Copyright(props) {
   return (
@@ -125,7 +128,7 @@ export default function Dashboard() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              .Net&React Admin Panel
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -175,8 +178,11 @@ export default function Dashboard() {
                 
                 <Routes>
                 <Route path="/" element={ <Home/> } />
-                <Route path="products" element={ <Products/> } />
-                <Route path="about" element={ <About/> } />
+                <Route path="/products" element={ <Products/> } />
+                <Route path="/products/create" element={ <CreateProduct/> } />
+                <Route path="/about" element={ <About/> } />
+                <Route path="/messages" element={ <Messages/> } />
+                <Route path="/messages/:id/" element={ <MessagesDetail/> } />
                 <Route path="contact" element={ <Contact/> } />
                 </Routes>     
                 
